@@ -5,8 +5,9 @@ This project implements a practical training helper for the Zest Tap rhythm desc
 
 Features:
 - Toggleable on-screen rhythm overlay.
-- Step-by-step guidance for hold W / release W / strafe A/D.
+- Clear step-by-step guidance for hold W / release W / strafe A/D.
 - In-game commands: /zesttap help, /zesttap toggle, /zesttap reset.
+- Clean, readable training HUD designed for practice sessions.
 
 Build note:
 - This mod targets Forge 1.8.9 and requires a Java 8 runtime for Gradle setup.

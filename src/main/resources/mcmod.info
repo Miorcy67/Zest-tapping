@@ -2,7 +2,7 @@
 {
   "modid": "zesttapping",
   "name": "Zest Tapping",
-  "description": "A Forge 1.8.9 training helper for practicing the Zest Tap rhythm from the tutorial.",
+  "description": "A polished Forge 1.8.9 training helper for practicing the Zest Tap rhythm from the tutorial.",
   "version": "1.0.0",
   "mcversion": "1.8.9",
   "url": "https://github.com/yourname/Zest-Tapping",
