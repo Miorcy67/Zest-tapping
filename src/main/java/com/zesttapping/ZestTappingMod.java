@@ -33,7 +33,7 @@ public class ZestTappingMod {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(new ClientEventHandler());
         MinecraftForge.EVENT_BUS.register(new ZestTapRenderer());
         MinecraftForge.EVENT_BUS.register(new ZestTapCommand());
     }
