@@ -1,0 +1,16 @@
+[
+{
+  "modid": "zesttapping",
+  "name": "Zest Tapping",
+  "description": "A Forge 1.8.9 training helper for practicing the Zest Tap rhythm from the tutorial.",
+  "version": "1.0.0",
+  "mcversion": "1.8.9",
+  "url": "https://github.com/yourname/Zest-Tapping",
+  "updateUrl": "",
+  "authorList": ["OpenAI Assistant"],
+  "credits": "Based on JazLikesPasta's tutorial and adapted for Forge 1.8.9.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
