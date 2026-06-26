@@ -24,16 +24,39 @@ public class ZestTapRenderer {
         int centerY = height / 2;
 
         String title = "Zest Tap Trainer";
+        String mode = "Mode: " + ZestTappingMod.practiceMode.getDisplayName();
         String step = getCurrentStep();
-        String guidance = "Hold W for hits 1-2 • Release W for hit 3 • Strafe A/D";
-        String tip = "Use clean burst clicks and keep your spacing tight";
-        String controls = "P toggles overlay • /zesttap help for commands";
+        String guidance = ZestTappingMod.practiceMode.getGuidance();
+        String tip = ZestTappingMod.practiceMode.getTimingHint();
+        String controls = "P toggles overlay • /zesttap help • /zesttap mode <low|medium|high>";
 
-        mc.fontRendererObj.drawStringWithShadow(title, centerX - 60, centerY - 50, 0x55FFFF);
-        mc.fontRendererObj.drawStringWithShadow(step, centerX - 90, centerY - 28, 0xFFFFFF);
-        mc.fontRendererObj.drawStringWithShadow(guidance, centerX - 155, centerY - 8, 0xAAAAAA);
-        mc.fontRendererObj.drawStringWithShadow(tip, centerX - 125, centerY + 12, 0xFFD166);
-        mc.fontRendererObj.drawStringWithShadow(controls, centerX - 120, centerY + 32, 0x8BE9FD);
+        int boxX = centerX - 170;
+        int boxY = centerY - 60;
+        int boxWidth = 340;
+        int boxHeight = 95;
+
+        drawPanel(mc, boxX, boxY, boxWidth, boxHeight);
+
+        mc.fontRendererObj.drawStringWithShadow(title, centerX - 55, centerY - 48, 0x55FFFF);
+        mc.fontRendererObj.drawStringWithShadow(mode, centerX - 70, centerY - 28, 0xFFD166);
+        mc.fontRendererObj.drawStringWithShadow(step, centerX - 125, centerY - 8, 0xFFFFFF);
+        mc.fontRendererObj.drawStringWithShadow(guidance, centerX - 155, centerY + 12, 0xAAAAAA);
+        mc.fontRendererObj.drawStringWithShadow(tip, centerX - 115, centerY + 32, 0x8BE9FD);
+        mc.fontRendererObj.drawStringWithShadow(controls, centerX - 150, centerY + 52, 0xC0C0C0);
+    }
+
+    private void drawPanel(Minecraft mc, int x, int y, int width, int height) {
+        int borderColor = 0x66000000;
+        int fillColor = 0xAA111111;
+        drawRect(mc, x, y, x + width, y + height, fillColor);
+        drawRect(mc, x, y, x + width, y + 1, borderColor);
+        drawRect(mc, x, y + height - 1, x + width, y + height, borderColor);
+        drawRect(mc, x, y, x + 1, y + height, borderColor);
+        drawRect(mc, x + width - 1, y, x + width, y + height, borderColor);
+    }
+
+    private void drawRect(Minecraft mc, int left, int top, int right, int bottom, int color) {
+        mc.ingameGUI.drawRect(left, top, right, bottom, color);
     }
 
     private String getCurrentStep() {

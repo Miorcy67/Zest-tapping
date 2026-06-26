@@ -23,6 +23,7 @@ public class ZestTapCommand extends CommandBase {
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.GOLD + "Zest Tapping Trainer"));
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.YELLOW + "• /zesttap toggle: show or hide the training overlay"));
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.YELLOW + "• /zesttap reset: restart the rhythm cycle"));
+            sender.addChatMessage(new ChatComponentText(EnumChatFormatting.YELLOW + "• /zesttap mode <low|medium|high>: change the practice profile"));
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.YELLOW + "• Press P to toggle the overlay quickly"));
             return;
         }
@@ -37,6 +38,12 @@ public class ZestTapCommand extends CommandBase {
             ZestTappingMod.pulsePhase = 0;
             ZestTappingMod.tickCounter = 0;
             sender.addChatMessage(new ChatComponentText(EnumChatFormatting.AQUA + "Rhythm cycle reset. Start fresh."));
+            return;
+        }
+
+        if ("mode".equals(args[0]) && args.length > 1) {
+            ZestTappingMod.practiceMode = PracticeMode.fromString(args[1]);
+            sender.addChatMessage(new ChatComponentText(EnumChatFormatting.AQUA + "Practice mode set to " + ZestTappingMod.practiceMode.getDisplayName() + "."));
             return;
         }
 

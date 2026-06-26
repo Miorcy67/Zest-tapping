@@ -1,0 +1,12 @@
+Zest Tapping Forge 1.8.9
+
+Features:
+- Practice overlay for hold/release/strafe rhythm
+- Low, medium, and high ping training modes
+- Command support via /zesttap
+- Clean HUD panel with trainer guidance
+
+How to use:
+1. Place the mod jar in your Minecraft 1.8.9 Forge mods folder.
+2. Launch Minecraft and press P to toggle the overlay.
+3. Use /zesttap mode <low|medium|high> to change the timing profile.

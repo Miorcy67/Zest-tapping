@@ -24,6 +24,7 @@ public class ZestTappingMod {
     public static boolean overlayEnabled = true;
     public static int pulsePhase = 0;
     public static int tickCounter = 0;
+    public static PracticeMode practiceMode = PracticeMode.MEDIUM;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
