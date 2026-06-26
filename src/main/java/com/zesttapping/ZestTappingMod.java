@@ -22,6 +22,14 @@ public class ZestTappingMod {
     public static CommonProxy proxy;
 
     public static boolean overlayEnabled = true;
+    public static boolean autoMovementEnabled = true;
+    public static boolean autoTapEnabled = true;
+    public static String currentTargetName = "None";
+    public static double currentTargetDistance = 0.0D;
+    public static int sequencePhase = 0;
+    public static int sequenceTickCounter = 0;
+    public static int attackTickCounter = 0;
+    public static boolean strafeRight = true;
     public static int pulsePhase = 0;
     public static int tickCounter = 0;
     public static PracticeMode practiceMode = PracticeMode.MEDIUM;

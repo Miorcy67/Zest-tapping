@@ -25,6 +25,7 @@ public class ZestTapRenderer {
 
         String title = "Zest Tap Trainer";
         String mode = "Mode: " + ZestTappingMod.practiceMode.getDisplayName();
+        String target = "Target: " + ZestTappingMod.currentTargetName + String.format(" (%.1fm)", ZestTappingMod.currentTargetDistance);
         String step = getCurrentStep();
         String guidance = ZestTappingMod.practiceMode.getGuidance();
         String tip = ZestTappingMod.practiceMode.getTimingHint();

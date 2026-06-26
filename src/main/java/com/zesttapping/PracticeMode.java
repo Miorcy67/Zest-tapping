@@ -32,14 +32,13 @@ public enum PracticeMode {
             return MEDIUM;
         }
 
-        switch (input.toLowerCase()) {
-            case "low":
-                return LOW;
-            case "high":
-                return HIGH;
-            case "medium":
-            default:
-                return MEDIUM;
+        String normalized = input.toLowerCase();
+        if ("low".equals(normalized)) {
+            return LOW;
         }
+        if ("high".equals(normalized)) {
+            return HIGH;
+        }
+        return MEDIUM;
     }
 }
